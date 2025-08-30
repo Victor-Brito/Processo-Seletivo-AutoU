@@ -1,1 +1,26 @@
-<p>text-input works!</p>
+<div class="text-input">
+    <div class="input-header">
+      <label for="emailText" class="input-label">Conteúdo do Email</label>
+      <span class="char-counter">{{ emailText().length }}/5000</span>
+    </div>
+    <div class="input-container">
+      <textarea
+        id="emailText"
+        [ngModel]="emailText()"
+        (ngModelChange)="onTextChange($event)"
+        placeholder="Cole aqui o conteúdo do email..."
+        [disabled]="isProcessing"
+        rows="10">
+      </textarea>
+    </div>
+    <div class="input-footer">
+      <span class="tip">Para melhores resultados, inclua todo o texto.</span>
+      <button
+        class="submit-btn"
+        [disabled]="!canSubmit()"
+        (click)="onSubmit()">
+        <div *ngIf="isProcessing" class="spinner"></div>
+        {{ isProcessing ? 'Analisando...' : 'Analisar Email' }}
+      </button>
+    </div>
+  </div>

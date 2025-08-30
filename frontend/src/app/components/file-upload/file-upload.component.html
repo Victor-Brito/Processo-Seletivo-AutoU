@@ -1,1 +1,58 @@
-<p>file-upload works!</p>
+<div class="file-upload">
+    <div class="upload-area"
+         [class.dragover]="isDragOver"
+         [class.disabled]="isProcessing"
+         (dragover)="onDragOver($event)"
+         (dragleave)="onDragLeave($event)"
+         (drop)="onDrop($event)"
+         (click)="!isProcessing && fileInput.click()">
+  
+      <input #fileInput
+             type="file"
+             accept=".txt,.pdf"
+             (change)="onFileChange($event)"
+             [disabled]="isProcessing"
+             style="display: none;">
+  
+      <div class="upload-content">
+        <div class="upload-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+            </path>
+          </svg>
+        </div>
+  
+        <div class="upload-text">
+          <p class="primary-text">
+            {{ isProcessing ? 'Processando...' : 'Clique para fazer upload ou arraste o arquivo aqui' }}
+          </p>
+          <p class="secondary-text" *ngIf="!isProcessing">
+            Suporta arquivos .txt e .pdf
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="selectedFile" class="file-info">
+      <div class="file-details">
+        <svg class="file-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+          </path>
+        </svg>
+        <div class="file-meta">
+          <span class="file-name">{{ selectedFile.name }}</span>
+          <span class="file-size">{{ formatFileSize(selectedFile.size) }}</span>
+        </div>
+      </div>
+      <button class="remove-btn"
+              (click)="removeFile()"
+              [disabled]="isProcessing"
+              title="Remover arquivo">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>

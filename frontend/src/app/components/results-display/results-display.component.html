@@ -1,1 +1,29 @@
-<p>results-display works!</p>
+<div class="results-display">
+    <div class="results-header">
+      <h2 class="results-title">Análise Completa</h2>
+    </div>
+  
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="card-header">
+          <h3>Categoria do Email</h3>
+        </div>
+        <div class="category-badge" [ngClass]="getCategoryClass()">
+          {{ result.category }}
+        </div>
+        <p class="category-description">{{ getCategoryDescription() }}</p>
+      </div>
+  
+      <div class="result-card">
+        <div class="card-header">
+          <h3>Resposta Sugerida</h3>
+        </div>
+        <div class="response-text">
+          {{ result.suggestedResponse }}
+        </div>
+        <button class="copy-btn" (click)="copyResponse()">
+          {{ copyButtonText }}
+        </button>
+      </div>
+    </div>
+  </div>
