@@ -2,32 +2,14 @@ import os
 import google.generativeai as genai
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from dotenv import load_dotenv
 import PyPDF2
 import re
-
-import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 
-
-try:
-    stopwords.words('portuguese')
-except LookupError:
-    print("Baixando recursos do NLTK (stopwords)...")
-    nltk.download('stopwords')
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    print("Baixando recursos do NLTK (punkt)...")
-    nltk.download('punkt')
-
-
-load_dotenv()
-
 app = Flask(__name__)
-#CORS(app, origins="http://localhost:4200")
+CORS(app, origins="http://localhost:4200")
 
 try:
     gemini_key = os.getenv("GEMINI_API_KEY")

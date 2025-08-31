@@ -13,7 +13,7 @@ interface BackendResponse {
 })
 export class EmailService {
 
-  private apiUrl = 'http://backend:5001/classify';
+  private apiUrl = 'http://localhost:5001/classify';
 
   constructor(private http: HttpClient) { }
 
