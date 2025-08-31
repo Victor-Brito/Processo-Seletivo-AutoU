@@ -27,7 +27,7 @@ except LookupError:
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins="http://localhost:4200")
+#CORS(app, origins="http://localhost:4200")
 
 try:
     gemini_key = os.getenv("GEMINI_API_KEY")
@@ -37,6 +37,9 @@ try:
 except Exception as e:
     print(f"Erro ao configurar a API do Gemini: {e}")
 
+@app.route("/api")
+def hello():
+    return {"msg": "Hello World"}
 
 def preprocess_text_com_nltk(text):
 
