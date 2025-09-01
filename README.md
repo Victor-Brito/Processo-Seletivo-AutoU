@@ -1,12 +1,12 @@
 # Processo Seletivo AutoU
 
-## 📖 Sobre o Teste
+## Sobre o Teste
 
 Este teste é uma solução web desenvolvida como parte do processo seletivo da AutoU. O objetivo é automatizar a análise e classificação de e-mails, utilizando Inteligência Artificial para determinar se um e-mail é produtivo ou não e sugerir uma resposta apropriada, otimizando o tempo da equipe e automatizando tarefas manuais.
 
 A aplicação permite que o usuário insira o conteúdo de um e-mail (seja por texto ou upload de arquivo `.txt`/`.pdf`) e recebe em troca uma análise completa, gerada pela API do Google Gemini.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 * **Análise de Texto e Arquivos:** Suporte para análise de texto livre ou upload de arquivos `.txt` e `.pdf`.
 * **Classificação com IA:** Utiliza o Google Gemini para classificar e-mails em duas categorias:
@@ -16,7 +16,7 @@ A aplicação permite que o usuário insira o conteúdo de um e-mail (seja por t
 * **Interface Reativa:** Frontend construído com Angular, proporcionando uma experiência de usuário fluida e moderna.
 * **Containerização:** Aplicação totalmente containerizada com Docker, garantindo portabilidade e facilidade de execução.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **Frontend:** Angular 17 (Standalone Components, TypeScript, SCSS)
 * **Backend:** Python 3.10 com Flask
@@ -28,7 +28,7 @@ A aplicação permite que o usuário insira o conteúdo de um e-mail (seja por t
 
 ---
 
-## 🏗️ Arquitetura do Projeto
+## Arquitetura do Projeto
 
 A aplicação foi estruturada seguindo as melhores práticas de desenvolvimento para garantir organização, escalabilidade e manutenibilidade.
 
