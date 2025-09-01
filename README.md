@@ -54,6 +54,7 @@ O backend foi desenvolvido utilizando o padrão **Application Factory** com **Bl
 ```bash
 git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/Victor-Brito/Processo-Seletivo-AutoU.git)
 cd nome-do-repositorio
+```
 
 **2. Configure sua Chave da API do Gemini**
 
