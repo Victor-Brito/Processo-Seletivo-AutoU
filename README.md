@@ -52,7 +52,7 @@ O backend foi desenvolvido utilizando o padrão **Application Factory** com **Bl
 
 **1. Clone o Repositório**
 ```bash
-git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/Victor-Brito/Processo-Seletivo-AutoU.git)
+git clone https://github.com/Victor-Brito/Processo-Seletivo-AutoU.git
 cd nome-do-repositorio
 ```
 
