@@ -1,6 +1,7 @@
 # Processo Seletivo AutoU
-> ⚠️ **Importante:** Para teste local com docker compose usar a branch deveelop
-> > ⚠️ **Importante:** Para que a aplicação funcione, você precisa da sua própria chave de API do Google Gemini.
+> ⚠️ **Importante:** Para que a aplicação funcione, você precisa da sua própria chave de API do Google Gemini.
+> https://aistudio.google.com/app/apikey
+> link para testar em produção: 
 
 ## Sobre o Teste
 
