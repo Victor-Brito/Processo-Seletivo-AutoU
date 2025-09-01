@@ -1,7 +1,7 @@
 # Processo Seletivo AutoU
 > ⚠️ **Importante:** Para que a aplicação funcione, você precisa da sua própria chave de API do Google Gemini.
 > 
-> ⚠️ **link para testar em produção:** https://aistudio.google.com/app/apikey
+> ⚠️ **link para testar conseguir API KEY:** https://aistudio.google.com/app/apikey
 
 ## Sobre o Teste
 
